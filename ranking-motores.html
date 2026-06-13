@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ranking Motores / Marcas · Motores PureTech</title>
+<meta name="description" content="Transparencia sobre fiabilidad de motores y marcas, más allá de la imagen de marketing del concesionario.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="overlay" id="overlay"></div>
+<div class="shell">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="brand-mark">PT</div>
+      <div>
+        <div class="brand-title">Motores PureTech</div>
+        <div class="brand-sub">Informaci&oacute;n &amp; experiencias</div>
+      </div>
+    </div>
+    <div class="nav-group-label">Secciones</div>
+    <ul class="nav">
+      <li><a class="nav-link" href="index.html"><span class="dot"></span>Inicio</a></li>
+<li><a class="nav-link" href="motores-puretech.html"><span class="dot"></span>Motores PureTech</a></li>
+<li><a class="nav-link" href="problemas-conocidos.html"><span class="dot"></span>Problemas conocidos</a></li>
+<li><a class="nav-link" href="mantenimiento-aceite.html"><span class="dot"></span>Mantenimiento y aceite</a></li>
+<li><a class="nav-link" href="sintomas-habituales.html"><span class="dot"></span>Síntomas habituales</a></li>
+<li><a class="nav-link" href="que-hacer.html"><span class="dot"></span>Qué hacer</a></li>
+<li><a class="nav-link" href="gasolina-aceite.html"><span class="dot"></span>Gasolina en el aceite del motor</a></li>
+<li><a class="nav-link" href="degradacion-correa.html"><span class="dot"></span>Cómo saber si la avería es por degradación de correa</a></li>
+<li><a class="nav-link" href="codigos-obd.html"><span class="dot"></span>Códigos OBD</a></li>
+<li><a class="nav-link" href="casos-reales.html"><span class="dot"></span>Casos reales</a></li>
+<li><a class="nav-link" href="mito-mala-eleccion.html"><span class="dot"></span>El mito de la mala elección</a></li>
+<li><a class="nav-link active" href="ranking-motores.html"><span class="dot"></span>Ranking Motores / Marcas</a></li>
+<li><a class="nav-link" href="situacion-espana.html"><span class="dot"></span>Situación actual en España</a></li>
+<li><a class="nav-link" href="comparte-experiencia.html"><span class="dot"></span>Comparte tu experiencia</a></li>
+<li><a class="nav-link" href="mi-experiencia.html"><span class="dot"></span>Mi experiencia</a></li>
+<li><a class="nav-link" href="garantia-ampliada.html"><span class="dot"></span>Detrás de la Garantía Ampliada PureTech</a></li>
+<li><a class="nav-link" href="experiencias-reales.html"><span class="dot"></span>Experiencias reales</a></li>
+<li><a class="nav-link" href="aviso-legal.html"><span class="dot"></span>Aviso legal</a></li>
+    </ul>
+    <div class="sidebar-footer">
+      Web independiente y comunitaria. No vinculada a fabricantes ni servicios oficiales.
+    </div>
+  </aside>
+
+  <div class="topbar">
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir men&uacute;">&#9776;</button>
+    <div class="brand">
+      <div class="brand-mark">PT</div>
+      <div class="brand-title">Motores PureTech</div>
+    </div>
+  </div>
+
+  <main class="main">
+    <div class="content">
+      <div class="eyebrow">Motores PureTech &middot; informaci&oacute;n y experiencias</div>
+      <h1>Ranking de fiabilidad</h1><p class="page-desc">Transparencia sobre fiabilidad de motores y marcas, más allá de la imagen de marketing del concesionario.</p>
+<p>Comprar un coche es, para la mayoría, la segunda inversión más importante de su vida. En el concesionario, nos enamoramos del diseño, de la suavidad de la conducción y de la última tecnología en pantallas. Es lógico: compramos lo que vemos. Sin embargo, la verdadera alma del vehículo —su motor— permanece oculta bajo el capó, protegida por una reputación de marca que, en ocasiones, no coincide con la realidad de su ingeniería actual.</p>
+<p>Si después de leer este ranking descubres que tu vehículo se encuentra en las posiciones de riesgo, no te culpes. No es responsabilidad del usuario conocer la composición química de una correa o la tolerancia térmica de un material; esa es la responsabilidad del fabricante. Muchas de las mecánicas que hoy presentan incidencias fueron vendidas como "innovaciones revolucionarias" y premiadas por la prensa especializada antes de demostrar su falta de fiabilidad en el mundo real.</p>
+<p>Esta recopilación ha sido elaborada para aportar la transparencia que el marketing suele omitir. Basándonos en datos técnicos y tendencias estadísticas de fiabilidad, te ofrecemos una guía clara para que puedas entender el estado actual del mercado, ya sea para realizar un mantenimiento preventivo o para tomar una decisión informada en tu próxima compra.</p>
+<blockquote>
+<p><em>Esta sección está en construcción y se irá completando con datos y comparativas adicionales.</em></p>
+</blockquote>
+      <div class="page-footer">
+        <span>Contenido informativo y comunitario. No sustituye el diagn&oacute;stico profesional.</span>
+        <a href="aviso-legal.html">Aviso legal</a>
+      </div>
+    </div>
+  </main>
+</div>
+<script>
+  var toggle = document.getElementById('navToggle');
+  var sidebar = document.getElementById('sidebar');
+  var overlay = document.getElementById('overlay');
+  if (toggle) {
+    toggle.addEventListener('click', function(){
+      sidebar.classList.toggle('open');
+      overlay.classList.toggle('show');
+    });
+    overlay.addEventListener('click', function(){
+      sidebar.classList.remove('open');
+      overlay.classList.remove('show');
+    });
+  }
+</script>
+</body>
+</html>
