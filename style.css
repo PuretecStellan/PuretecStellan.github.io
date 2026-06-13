@@ -25,7 +25,13 @@
 html{scroll-behavior:smooth}
 body{
   margin:0;
-  background:var(--bg);
+  background-color:var(--bg);
+  background-image:
+    radial-gradient(circle at 14% 0%, rgba(226,163,59,.10), transparent 40%),
+    radial-gradient(circle at 100% 18%, rgba(127,182,207,.07), transparent 45%),
+    repeating-linear-gradient(0deg, rgba(255,255,255,.025) 0px, rgba(255,255,255,.025) 1px, transparent 1px, transparent 64px),
+    repeating-linear-gradient(90deg, rgba(255,255,255,.025) 0px, rgba(255,255,255,.025) 1px, transparent 1px, transparent 64px);
+  background-attachment:fixed;
   color:var(--text);
   font-family:var(--font-body);
   font-size:16px;
@@ -36,7 +42,132 @@ body{
 a{color:var(--link); text-decoration:none; border-bottom:1px solid rgba(127,182,207,.35)}
 a:hover{color:var(--accent); border-color:rgba(226,163,59,.5)}
 
-/* ===== Layout shell ===== */
+/* ===== Hero (home page) ===== */
+.hero{
+  display:flex;
+  align-items:center;
+  gap:2.5rem;
+  padding:1rem 0 2.6rem;
+  margin-bottom:1.4rem;
+  border-bottom:1px solid var(--border);
+}
+.hero-text{flex:1; min-width:0}
+.hero-tag{
+  font-family:var(--font-mono);
+  font-size:.74rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--accent);
+  margin-bottom:.8rem;
+  display:flex;
+  align-items:center;
+  gap:.5rem;
+}
+.hero-tag::before{
+  content:"";
+  width:8px; height:8px; border-radius:50%;
+  background:var(--accent);
+  box-shadow:0 0 0 4px var(--accent-soft);
+}
+.hero h1{
+  font-size:2.6rem;
+  margin:0 0 .9rem;
+  line-height:1.12;
+}
+.hero h1 .accent{color:var(--accent)}
+.hero-lead{
+  color:var(--muted);
+  font-size:1.08rem;
+  max-width:520px;
+  margin:0;
+}
+.hero-art{
+  flex-shrink:0;
+  width:280px;
+}
+.hero-art svg{width:100%; height:auto; display:block}
+
+@media (max-width:760px){
+  .hero{flex-direction:column-reverse; gap:1.6rem; padding-bottom:2rem}
+  .hero-art{width:200px}
+  .hero h1{font-size:2rem}
+}
+
+/* ===== Card grid (home page quick links) ===== */
+.card-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(220px, 1fr));
+  gap:1rem;
+  margin:1.6rem 0 2.6rem;
+}
+.card{
+  display:block;
+  border:1px solid var(--border);
+  border-radius:10px;
+  background:var(--surface);
+  padding:1.1rem 1.2rem;
+  border-top:3px solid var(--card-c, var(--accent));
+  transition:transform .15s ease, border-color .15s ease, background .15s ease;
+}
+.card:hover{
+  transform:translateY(-2px);
+  background:var(--surface-2);
+  border-color:var(--border);
+}
+.card .card-icon{font-size:1.4rem; display:block; margin-bottom:.5rem}
+.card .card-title{
+  font-family:var(--font-display);
+  font-weight:700;
+  font-size:1rem;
+  color:var(--text);
+  margin-bottom:.3rem;
+}
+.card .card-desc{font-size:.86rem; color:var(--muted); line-height:1.5}
+.card-red{--card-c:var(--red)}
+.card-amber{--card-c:var(--amber)}
+.card-green{--card-c:var(--green)}
+.card-link{--card-c:var(--link)}
+
+/* ===== Section divider with label ===== */
+.section-label{
+  font-family:var(--font-mono);
+  font-size:.7rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin:0 0 1rem;
+  display:flex;
+  align-items:center;
+  gap:.8rem;
+}
+.section-label::after{
+  content:"";
+  flex:1;
+  height:1px;
+  background:var(--border);
+}
+
+/* ===== External link list ===== */
+.link-list{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.5rem}
+.link-list li{
+  border:1px solid var(--border);
+  border-radius:8px;
+  background:var(--surface);
+}
+.link-list a{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:.8rem;
+  padding:.75rem 1rem;
+  border-bottom:none;
+  color:var(--text);
+  font-size:.92rem;
+}
+.link-list a:hover{color:var(--accent); background:var(--surface-2)}
+.link-list a::after{content:"\2197"; color:var(--muted); flex-shrink:0}
+
+
 .shell{display:flex; min-height:100vh}
 
 /* ===== Sidebar ===== */
