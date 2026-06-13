@@ -3,80 +3,79 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Inicio · Motores PureTech</title>
+<title>Inicio &middot; Motores PureTech</title>
 <meta name="description" content="Información técnica, experiencias reales y recursos sobre los motores PureTech: la correa de distribución bañada en aceite y los síntomas asociados.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="overlay" id="overlay"></div>
-<div class="shell">
-  <aside class="sidebar" id="sidebar">
-    <div class="brand">
-      <div class="brand-mark">PT</div>
-      <div>
-        <div class="brand-title">Motores PureTech</div>
-        <div class="brand-sub">Informaci&oacute;n &amp; experiencias</div>
+<header class="topnav">
+  <div class="topnav-inner">
+    <a class="topnav-brand" href="index.html">
+      <div class="topnav-mark">PT</div>
+      <div class="topnav-title">Motores PureTech<small>Informaci&oacute;n &amp; experiencias</small></div>
+    </a>
+    <nav class="topnav-links" id="topnavLinks">
+      <a href="index.html" data-page="index.html">Inicio</a>
+      <a href="motores-puretech.html" data-page="motores-puretech.html">Motores PureTech</a>
+      <a href="problemas-conocidos.html" data-page="problemas-conocidos.html">Problemas conocidos</a>
+      <a href="mantenimiento-aceite.html" data-page="mantenimiento-aceite.html">Mantenimiento y aceite</a>
+      <a href="sintomas-habituales.html" data-page="sintomas-habituales.html">Síntomas habituales</a>
+      <a href="que-hacer.html" data-page="que-hacer.html">Qué hacer</a>
+      <a href="gasolina-aceite.html" data-page="gasolina-aceite.html">Gasolina en el aceite del motor</a>
+      <a href="degradacion-correa.html" data-page="degradacion-correa.html">Cómo saber si la avería es por degradación de correa</a>
+      <a href="codigos-obd.html" data-page="codigos-obd.html">Códigos OBD</a>
+      <a href="casos-reales.html" data-page="casos-reales.html">Casos reales</a>
+      <a href="mito-mala-eleccion.html" data-page="mito-mala-eleccion.html">El mito de la mala elección</a>
+      <a href="ranking-motores.html" data-page="ranking-motores.html">Ranking Motores / Marcas</a>
+      <a href="situacion-espana.html" data-page="situacion-espana.html">Situación actual en España</a>
+      <a href="comparte-experiencia.html" data-page="comparte-experiencia.html">Comparte tu experiencia</a>
+      <a href="mi-experiencia.html" data-page="mi-experiencia.html">Mi experiencia</a>
+      <a href="garantia-ampliada.html" data-page="garantia-ampliada.html">Detrás de la Garantía Ampliada PureTech</a>
+      <a href="experiencias-reales.html" data-page="experiencias-reales.html">Experiencias reales</a>
+      <a href="aviso-legal.html" data-page="aviso-legal.html">Aviso legal</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir men&uacute;">&#9776;</button>
+  </div>
+</header>
+
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-tag">Diagn&oacute;stico &amp; comunidad</div>
+      <h1>Motores <span class="accent">PureTech</span><br>en lenguaje claro</h1>
+      <p class="hero-lead">Informaci&oacute;n t&eacute;cnica, s&iacute;ntomas, c&oacute;digos OBD y experiencias reales sobre la correa de distribuci&oacute;n ba&ntilde;ada en aceite &mdash; para entender qu&eacute; pasa bajo el cap&oacute; y c&oacute;mo actuar.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="problemas-conocidos.html">Ver problemas conocidos</a>
+        <a class="btn btn-ghost" href="que-hacer.html">Qu&eacute; hacer si te pasa</a>
       </div>
     </div>
-    <div class="nav-group-label">Secciones</div>
-    <ul class="nav">
-      <li><a class="nav-link active" href="index.html"><span class="dot"></span>Inicio</a></li>
-<li><a class="nav-link" href="motores-puretech.html"><span class="dot"></span>Motores PureTech</a></li>
-<li><a class="nav-link" href="problemas-conocidos.html"><span class="dot"></span>Problemas conocidos</a></li>
-<li><a class="nav-link" href="mantenimiento-aceite.html"><span class="dot"></span>Mantenimiento y aceite</a></li>
-<li><a class="nav-link" href="sintomas-habituales.html"><span class="dot"></span>Síntomas habituales</a></li>
-<li><a class="nav-link" href="que-hacer.html"><span class="dot"></span>Qué hacer</a></li>
-<li><a class="nav-link" href="gasolina-aceite.html"><span class="dot"></span>Gasolina en el aceite del motor</a></li>
-<li><a class="nav-link" href="degradacion-correa.html"><span class="dot"></span>Cómo saber si la avería es por degradación de correa</a></li>
-<li><a class="nav-link" href="codigos-obd.html"><span class="dot"></span>Códigos OBD</a></li>
-<li><a class="nav-link" href="casos-reales.html"><span class="dot"></span>Casos reales</a></li>
-<li><a class="nav-link" href="mito-mala-eleccion.html"><span class="dot"></span>El mito de la mala elección</a></li>
-<li><a class="nav-link" href="ranking-motores.html"><span class="dot"></span>Ranking Motores / Marcas</a></li>
-<li><a class="nav-link" href="situacion-espana.html"><span class="dot"></span>Situación actual en España</a></li>
-<li><a class="nav-link" href="comparte-experiencia.html"><span class="dot"></span>Comparte tu experiencia</a></li>
-<li><a class="nav-link" href="mi-experiencia.html"><span class="dot"></span>Mi experiencia</a></li>
-<li><a class="nav-link" href="garantia-ampliada.html"><span class="dot"></span>Detrás de la Garantía Ampliada PureTech</a></li>
-<li><a class="nav-link" href="experiencias-reales.html"><span class="dot"></span>Experiencias reales</a></li>
-<li><a class="nav-link" href="aviso-legal.html"><span class="dot"></span>Aviso legal</a></li>
-    </ul>
-    <div class="sidebar-footer">
-      Web independiente y comunitaria. No vinculada a fabricantes ni servicios oficiales.
-    </div>
-  </aside>
-
-  <div class="topbar">
-    <button class="nav-toggle" id="navToggle" aria-label="Abrir men&uacute;">&#9776;</button>
-    <div class="brand">
-      <div class="brand-mark">PT</div>
-      <div class="brand-title">Motores PureTech</div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 280 220" xmlns="http://www.w3.org/2000/svg">
+        <path d="M40,150 A100,100 0 0 1 90,63.4" fill="none" stroke="var(--green)" stroke-width="14" stroke-linecap="round"/>
+        <path d="M90,63.4 A100,100 0 0 1 190,63.4" fill="none" stroke="var(--amber)" stroke-width="14" stroke-linecap="round"/>
+        <path d="M190,63.4 A100,100 0 0 1 240,150" fill="none" stroke="var(--red)" stroke-width="14" stroke-linecap="round"/>
+        <line x1="140" y1="150" x2="201" y2="98" stroke="var(--text)" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="140" cy="150" r="10" fill="var(--text)"/>
+        <text x="140" y="185" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="2" fill="var(--muted)">PRESI&#211;N ACEITE</text>
+        <path d="M236 30 C236 30 218 54 218 68 C218 80 226 88 236 88 C246 88 254 80 254 68 C254 54 236 30 236 30 Z" fill="var(--accent)" opacity="0.85"/>
+      </svg>
     </div>
   </div>
-
-  <main class="main">
-    <div class="content">
-      
-      <div class="hero">
-  <div class="hero-text">
-    <div class="hero-tag">Diagnóstico &amp; comunidad</div>
-    <h1>Motores <span class="accent">PureTech</span><br>en lenguaje claro</h1>
-    <p class="hero-lead">Información técnica, síntomas, códigos OBD y experiencias reales sobre la correa de distribución bañada en aceite — para entender qué pasa bajo el capó y cómo actuar.</p>
+  <div class="hero-stats">
+    <div class="stat"><div class="stat-num">18</div><div class="stat-label">secciones de informaci&oacute;n</div></div>
+    <div class="stat"><div class="stat-num">10 a&ntilde;os</div><div class="stat-label">/ 175.000&ndash;180.000 km de garant&iacute;a ampliada</div></div>
+    <div class="stat"><div class="stat-num">750.000+</div><div class="stat-label">veh&iacute;culos potencialmente afectados en Espa&ntilde;a</div></div>
+    <div class="stat"><div class="stat-num">3.200+</div><div class="stat-label">demandas colectivas documentadas</div></div>
   </div>
-  <div class="hero-art" aria-hidden="true">
-    <svg viewBox="0 0 280 220" xmlns="http://www.w3.org/2000/svg">
-      <path d="M40,150 A100,100 0 0 1 90,63.4" fill="none" stroke="var(--green)" stroke-width="14" stroke-linecap="round"/>
-      <path d="M90,63.4 A100,100 0 0 1 190,63.4" fill="none" stroke="var(--amber)" stroke-width="14" stroke-linecap="round"/>
-      <path d="M190,63.4 A100,100 0 0 1 240,150" fill="none" stroke="var(--red)" stroke-width="14" stroke-linecap="round"/>
-      <line x1="140" y1="150" x2="201" y2="98" stroke="var(--text)" stroke-width="5" stroke-linecap="round"/>
-      <circle cx="140" cy="150" r="10" fill="var(--text)"/>
-      <text x="140" y="185" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="2" fill="var(--muted)">PRESI&#211;N ACEITE</text>
-      <path d="M236 30 C236 30 218 54 218 68 C218 80 226 88 236 88 C246 88 254 80 254 68 C254 54 236 30 236 30 Z" fill="var(--accent)" opacity="0.85"/>
-    </svg>
-  </div>
-</div>
+</section>
 
-<div class="section-label">Empieza por aqu&iacute;</div>
+
+<main class="main">
+  <div class="content">
+    <div class="section-label">Empieza por aqu&iacute;</div>
 <div class="card-grid">
   <a class="card card-red" href="problemas-conocidos.html">
     <span class="card-icon">⚠️</span>
@@ -148,27 +147,29 @@
 <blockquote>
 <p>Esta web es independiente y no está vinculada a fabricantes, servicios oficiales ni bufetes de abogados. Los enlaces externos se comparten únicamente con fines informativos y no implican recomendación.</p>
 </blockquote>
-      <div class="page-footer">
-        <span>Contenido informativo y comunitario. No sustituye el diagn&oacute;stico profesional.</span>
-        <a href="aviso-legal.html">Aviso legal</a>
-      </div>
+    <div class="page-footer">
+      <span>Contenido informativo y comunitario. No sustituye el diagn&oacute;stico profesional.</span>
+      <a href="aviso-legal.html">Aviso legal</a>
     </div>
-  </main>
-</div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  Motores PureTech &mdash; web independiente y comunitaria. No vinculada a fabricantes ni servicios oficiales.
+</footer>
+
 <script>
   var toggle = document.getElementById('navToggle');
-  var sidebar = document.getElementById('sidebar');
-  var overlay = document.getElementById('overlay');
+  var links = document.getElementById('topnavLinks');
   if (toggle) {
     toggle.addEventListener('click', function(){
-      sidebar.classList.toggle('open');
-      overlay.classList.toggle('show');
-    });
-    overlay.addEventListener('click', function(){
-      sidebar.classList.remove('open');
-      overlay.classList.remove('show');
+      links.classList.toggle('open');
     });
   }
+  var active = "index.html";
+  document.querySelectorAll('.topnav-links a').forEach(function(a){
+    if (a.getAttribute('data-page') === active) a.classList.add('active');
+  });
 </script>
 </body>
 </html>
