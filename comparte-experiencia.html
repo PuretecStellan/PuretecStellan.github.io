@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparte tu experiencia | Motores PureTech</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="topbar">
+        <span class="badge">PT · Información &amp; Experiencias</span>
+        <h1>Motores PureTech</h1>
+        <p>Envía tu caso para ayudar a otros conductores y consulta comunidades de afectados</p>
+    </header>
+
+    <nav aria-label="Navegación principal">
+        <div class="nav-inner">
+            <a href="index.html">Inicio</a>
+            <a href="motores-puretech.html">Motores PureTech</a>
+            <a href="problemas-conocidos.html">Problemas conocidos</a>
+            <a href="mantenimiento-aceite.html">Mantenimiento y aceite</a>
+            <a href="sintomas-habituales.html">Síntomas habituales</a>
+            <a href="que-hacer.html">Qué hacer</a>
+            <a href="gasolina-aceite.html">Gasolina en el aceite</a>
+            <a href="degradacion-correa.html">Degradación de correa</a>
+            <a href="codigos-obd.html">Códigos OBD</a>
+            <a href="casos-reales.html">Casos reales</a>
+            <a href="mito-mala-eleccion.html">Mito de la mala elección</a>
+            <a href="ranking-motores.html">Ranking Motores / Marcas</a>
+            <a href="situacion-espana.html">Situación en España</a>
+            <a href="garantia-ampliada.html">Garantía Ampliada</a>
+            <a href="mi-experiencia.html">Mi experiencia</a>
+            <a href="comparte-experiencia.html" class="active">Comparte tu experiencia</a>
+            <a href="aviso-legal.html">Aviso legal</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="card">
+            <h2>Comparte tu experiencia con motores PureTech</h2>
+            <p>Si tienes o has tenido un vehículo con motor PureTech 1.0 o 1.2, puedes compartir tu experiencia para ayudar a identificar patrones y orientar a otros propietarios.</p>
+
+            <div class="alert">
+                <strong>Nota sobre el formulario en GitHub Pages:</strong> Como GitHub Pages aloja páginas estáticas, este formulario usa <code>mailto:</code> por defecto o puede conectarse a un servicio gratuito como Formspree sustituyendo la URL del atributo <code>action</code>.
+            </div>
+
+            <form action="mailto:contacto@ejemplo.com" method="post" enctype="text/plain">
+                <label for="nombre">Nombre o alias:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ej. Carlos M." required>
+
+                <label for="vehiculo">Modelo, año y motorización:</label>
+                <input type="text" id="vehiculo" name="vehiculo" placeholder="Ej. Citroën C4 1.2 PureTech 130 (2021) - 62.000 km" required>
+
+                <label for="experiencia">Tu experiencia o síntomas observados:</label>
+                <textarea id="experiencia" name="experiencia" rows="6" placeholder="Describe qué síntomas aparecieron, qué diagnóstico dio el taller y si entró en garantía..." required></textarea>
+
+                <button type="submit">Enviar experiencia</button>
+            </form>
+
+            <h3>Comunidades y recursos externos</h3>
+            <ul>
+                <li>Plataforma oficial de compensación Stellantis: <a href="https://www.stellantis.com/en/contacts/puretech-compensation-platform" target="_blank" rel="noopener noreferrer">stellantis.com/en/contacts/puretech-compensation-platform</a></li>
+                <li>Reclamación pública OCU España: <a href="https://www.ocu.org/reclamar/lista-reclamaciones-publicas/motor-puretech-1-2-incumplimi/b9c09598fca6565832" target="_blank" rel="noopener noreferrer">ocu.org</a></li>
+                <li>Información sobre reclamación colectiva en España: <a href="https://puretech.es/reclamacion-colectiva-stellantis-puretech" target="_blank" rel="noopener noreferrer">puretech.es</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p><strong>Motores PureTech — Información &amp; experiencias</strong> · Espacio informativo y comunitario independiente.</p>
+        <p>No representa a ninguna marca ni sustituye el diagnóstico profesional de un taller. <a href="aviso-legal.html">Consultar Aviso Legal</a>.</p>
+    </footer>
+</body>
+</html>
