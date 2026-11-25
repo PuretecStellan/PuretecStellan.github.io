@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Códigos OBD (DTC) | Motores PureTech</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="topbar">
+        <span class="badge">PT · Información &amp; Experiencias</span>
+        <h1>Motores PureTech</h1>
+        <p>Diagnóstico a bordo y listado de códigos vinculados a degradación de correa y lubricación</p>
+    </header>
+
+    <nav aria-label="Navegación principal">
+        <div class="nav-inner">
+            <a href="index.html">Inicio</a>
+            <a href="motores-puretech.html">Motores PureTech</a>
+            <a href="problemas-conocidos.html">Problemas conocidos</a>
+            <a href="mantenimiento-aceite.html">Mantenimiento y aceite</a>
+            <a href="sintomas-habituales.html">Síntomas habituales</a>
+            <a href="que-hacer.html">Qué hacer</a>
+            <a href="gasolina-aceite.html">Gasolina en el aceite</a>
+            <a href="degradacion-correa.html">Degradación de correa</a>
+            <a href="codigos-obd.html" class="active">Códigos OBD</a>
+            <a href="casos-reales.html">Casos reales</a>
+            <a href="mito-mala-eleccion.html">Mito de la mala elección</a>
+            <a href="ranking-motores.html">Ranking Motores / Marcas</a>
+            <a href="situacion-espana.html">Situación en España</a>
+            <a href="garantia-ampliada.html">Garantía Ampliada</a>
+            <a href="mi-experiencia.html">Mi experiencia</a>
+            <a href="comparte-experiencia.html">Comparte tu experiencia</a>
+            <a href="aviso-legal.html">Aviso legal</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="card">
+            <h2>¿Qué es el OBD y qué información aportan sus códigos?</h2>
+            <p>El <strong>OBD (On-Board Diagnostics)</strong> monitoriza el funcionamiento del motor y registra códigos DTC cuando un parámetro sale de rango. Sin embargo, detecta síntomas y no siempre la causa raíz: en fallos intermitentes, el aviso puede desaparecer al reiniciar y no quedar permanente.</p>
+
+            <h3>Listado de códigos OBD (DTC) vinculados a degradación de correa y lubricación</h3>
+
+            <h4>1. Códigos críticos de presión de aceite (Obstrucción de la chupona)</h4>
+            <ul>
+                <li><span class="dtc-code">P0521</span> Rango o rendimiento del sensor de presión de aceite del motor.</li>
+                <li><span class="dtc-code">P0524</span> Presión de aceite del motor demasiado baja.</li>
+                <li><span class="dtc-code">P15A1</span> Defecto de presión de aceite (incoherencia entre presión real y demandada).</li>
+                <li><span class="dtc-code">P15A8</span> Defecto de presión de aceite en relación con la electroválvula de la bomba de aceite.</li>
+            </ul>
+
+            <h4>2. Códigos de distribución variable (Electroválvulas VVT obstruidas)</h4>
+            <ul>
+                <li><span class="dtc-code">P0011</span> Defecto de posición del árbol de levas de admisión (sincronización demasiado avanzada).</li>
+                <li><span class="dtc-code">P0014</span> Defecto de posición del árbol de levas de escape (sincronización demasiado avanzada).</li>
+                <li><span class="dtc-code">P000A</span> Respuesta lenta de la posición del árbol de levas de admisión.</li>
+                <li><span class="dtc-code">P000B</span> Respuesta lenta de la posición del árbol de levas de escape.</li>
+            </ul>
+
+            <h4>3. Códigos de asistencia de frenado y vacío (Bomba de vacío contaminada)</h4>
+            <ul>
+                <li><span class="dtc-code">P053F</span> Rendimiento del arranque en frío de la presión del vacío del freno.</li>
+                <li><span class="dtc-code">P0520</span> Circuito del sensor/interruptor de presión de aceite (afecta indirectamente a la gestión del vacío).</li>
+                <li><span class="dtc-code">U1213</span> Datos no válidos transmitidos por el calculador del motor (aparece a veces en ABS/ESP por falta de vacío).</li>
+            </ul>
+
+            <h4>4. Códigos de rendimiento del Turbo (Falta de lubricación o vacío)</h4>
+            <ul>
+                <li><span class="dtc-code">P0299</span> Condición de baja presión de soplado del turbocompresor (<em>Underboost</em>).</li>
+                <li><span class="dtc-code">P2263</span> Rendimiento del sistema de presión de sobrecarga del turbocompresor.</li>
+            </ul>
+
+            <h4>5. Otros códigos relacionados por seguridad electrónica</h4>
+            <ul>
+                <li><span class="dtc-code">P1032</span> Defecto de detección de degradación del aceite (en versiones con sensor de calidad de aceite).</li>
+                <li><span class="dtc-code">P0341</span> Rango/rendimiento del circuito del sensor de posición del árbol de levas (estiramiento o desfase de correa).</li>
+                <li><span class="dtc-code">P0597</span> Circuito de control del termostato abierto (frecuente junto a fallos de presión por gestión térmica de la ECU).</li>
+            </ul>
+
+            <div class="alert danger">
+                <strong>Nota importante:</strong> Si el vehículo registra <strong>P0524</strong> o <strong>P15A1</strong>, el riesgo de daño grave por falta de lubricación es inmediato. Borrar el código sin limpiar físicamente el cárter/chupona y revisar la correa no soluciona el problema.
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p><strong>Motores PureTech — Información &amp; experiencias</strong> · Espacio informativo y comunitario independiente.</p>
+        <p>No representa a ninguna marca ni sustituye el diagnóstico profesional de un taller. <a href="aviso-legal.html">Consultar Aviso Legal</a>.</p>
+    </footer>
+</body>
+</html>
