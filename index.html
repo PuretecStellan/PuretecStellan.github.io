@@ -6,21 +6,96 @@
     <title>Inicio | Motores PureTech</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        .hero-cover {
-            margin-bottom: 24px;
+        .page-shell {
+            display: grid;
+            grid-template-columns: 250px minmax(0, 1fr);
+            gap: 24px;
+            align-items: start;
+            max-width: 1280px;
+            margin: 24px auto;
+            padding: 0 18px;
+        }
+        .sidebar-nav {
+            position: sticky;
+            top: 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            padding: 16px;
+            border-radius: 16px;
+            border: 1px solid rgba(148, 163, 184, 0.22);
+            background: rgba(15, 23, 42, 0.78);
+            box-shadow: 0 14px 32px rgba(2, 6, 23, 0.35);
+        }
+        .sidebar-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .sidebar-group + .sidebar-group {
+            padding-top: 12px;
+            border-top: 1px solid rgba(148, 163, 184, 0.16);
+        }
+        .sidebar-group-title {
+            font-size: 0.74rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #94a3b8;
+            padding: 0 10px;
+        }
+        .sidebar-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+        .sidebar-list a {
+            display: block;
+            padding: 8px 12px;
+            border-radius: 10px;
+            color: #e2e8f0;
+            text-decoration: none;
+            font-size: 0.92rem;
+            line-height: 1.35;
+            transition: background-color 0.15s ease, color 0.15s ease;
+        }
+        .sidebar-list a:hover {
+            background: rgba(56, 189, 248, 0.12);
+            color: #ffffff;
+        }
+        .sidebar-list a.active {
+            background: rgba(56, 189, 248, 0.2);
+            color: #7dd3fc;
+            font-weight: 600;
+            border: 1px solid rgba(125, 211, 252, 0.35);
+        }
+        .page-shell main {
+            margin: 0;
+            padding: 0;
+            max-width: none;
+            width: 100%;
+        }
+        .hero-cover,
+        .exp-photo {
+            margin: 0 0 24px 0;
             border-radius: 16px;
             overflow: hidden;
             border: 1px solid rgba(148, 163, 184, 0.22);
             background: rgba(15, 23, 42, 0.72);
             box-shadow: 0 18px 40px rgba(2, 6, 23, 0.45);
         }
-        .hero-cover img {
+        .hero-cover img,
+        .exp-photo img {
             display: block;
             width: 100%;
             max-height: 460px;
             object-fit: cover;
         }
-        .hero-cover figcaption {
+        .hero-cover figcaption,
+        .exp-photo figcaption {
             padding: 12px 18px;
             font-size: 0.92rem;
             color: #cbd5e1;
@@ -55,6 +130,14 @@
             font-size: 0.92rem;
             opacity: 0.88;
         }
+        @media (max-width: 900px) {
+            .page-shell {
+                grid-template-columns: 1fr;
+            }
+            .sidebar-nav {
+                position: static;
+            }
+        }
     </style>
 </head>
 <body>
@@ -77,15 +160,43 @@
         </div>
     </header>
 
-    <nav class="tabs-nav" aria-label="Navegación principal por bloques">
-        <div class="tabs-container">
-            <div class="nav-group"><span class="nav-group-label">Motor y fallos:</span><a href="index.html" class="active">Inicio</a><a href="motores-puretech.html">Motores PureTech</a><a href="problemas-conocidos.html">Problemas</a><a href="mantenimiento-aceite.html">Aceite y mantenimiento</a><a href="sintomas-habituales.html">Síntomas</a><a href="gasolina-aceite.html">Gasolina en aceite</a><a href="degradacion-correa.html">Correa húmeda</a><a href="codigos-obd.html">Códigos OBD</a></div>
-            <div class="nav-divider" aria-hidden="true"></div>
-            <div class="nav-group"><span class="nav-group-label">Taller y derechos:</span><a href="que-hacer.html">Qué hacer</a><a href="situacion-espana.html">España</a><a href="garantia-ampliada.html">Garantía ampliada</a><a href="casos-reales.html">Casos reales</a></div>
-            <div class="nav-divider" aria-hidden="true"></div>
-            <div class="nav-group"><span class="nav-group-label">Comunidad y datos:</span><a href="mi-experiencia.html">Mi experiencia</a><a href="comparte-experiencia.html">Compartir caso</a><a href="ranking-motores.html">Ranking motores</a><a href="mito-mala-eleccion.html">Por qué elegimos</a><a href="aviso-legal.html">Aviso legal</a></div>
+    <div class="page-shell">
+    <aside class="sidebar-nav" aria-label="Navegación lateral por bloques">
+        <div class="sidebar-group">
+            <span class="sidebar-group-title">Motor y fallos</span>
+            <ul class="sidebar-list">
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="motores-puretech.html">Motores PureTech</a></li>
+                <li><a href="problemas-conocidos.html">Problemas</a></li>
+                <li><a href="mantenimiento-aceite.html">Aceite y mantenimiento</a></li>
+                <li><a href="sintomas-habituales.html">Síntomas</a></li>
+                <li><a href="gasolina-aceite.html">Gasolina en aceite</a></li>
+                <li><a href="degradacion-correa.html">Correa húmeda</a></li>
+                <li><a href="codigos-obd.html">Códigos OBD</a></li>
+            </ul>
         </div>
-    </nav>
+
+        <div class="sidebar-group">
+            <span class="sidebar-group-title">Taller y derechos</span>
+            <ul class="sidebar-list">
+                <li><a href="que-hacer.html">Qué hacer</a></li>
+                <li><a href="situacion-espana.html">España</a></li>
+                <li><a href="garantia-ampliada.html">Garantía ampliada</a></li>
+                <li><a href="casos-reales.html">Casos reales</a></li>
+            </ul>
+        </div>
+
+        <div class="sidebar-group">
+            <span class="sidebar-group-title">Comunidad y datos</span>
+            <ul class="sidebar-list">
+                <li><a href="mi-experiencia.html">Mi experiencia</a></li>
+                <li><a href="comparte-experiencia.html">Compartir caso</a></li>
+                <li><a href="ranking-motores.html">Ranking motores</a></li>
+                <li><a href="mito-mala-eleccion.html">Por qué elegimos</a></li>
+                <li><a href="aviso-legal.html">Aviso legal</a></li>
+            </ul>
+        </div>
+    </aside>
 
     <main>
         <figure class="hero-cover">
@@ -126,6 +237,7 @@
             </div>
         </section>
     </main>
+    </div>
 
     <footer>
         <p><strong>Motores PureTech — Información &amp; experiencias</strong> · Portal informativo y comunitario independiente sobre mecánica y casuística PureTech.</p>
