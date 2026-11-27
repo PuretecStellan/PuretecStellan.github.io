@@ -5,6 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio | Motores PureTech</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .hero-cover {
+            margin-bottom: 24px;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(148, 163, 184, 0.22);
+            background: rgba(15, 23, 42, 0.72);
+            box-shadow: 0 18px 40px rgba(2, 6, 23, 0.45);
+        }
+        .hero-cover img {
+            display: block;
+            width: 100%;
+            max-height: 460px;
+            object-fit: cover;
+        }
+        .hero-cover figcaption {
+            padding: 12px 18px;
+            font-size: 0.92rem;
+            color: #cbd5e1;
+            border-top: 1px solid rgba(148, 163, 184, 0.16);
+        }
+        .quick-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+            margin-top: 18px;
+        }
+        .quick-card {
+            display: block;
+            padding: 16px 18px;
+            border-radius: 12px;
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            background: rgba(15, 23, 42, 0.55);
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.15s ease, border-color 0.15s ease;
+        }
+        .quick-card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(56, 189, 248, 0.55);
+        }
+        .quick-card h3 {
+            margin: 0 0 6px 0;
+            font-size: 1.05rem;
+        }
+        .quick-card p {
+            margin: 0;
+            font-size: 0.92rem;
+            opacity: 0.88;
+        }
+    </style>
 </head>
 <body>
     <header class="topbar">
@@ -16,7 +67,7 @@
                     <span class="badge b-emerald">España &amp; garantías</span>
                 </div>
                 <h1>Motores PureTech</h1>
-                <p>Información técnica, experiencias reales, códigos OBD y recursos sobre motores PureTech</p>
+                <p>Portal informativo independiente sobre mecánica, mantenimiento, síntomas y reclamaciones en España</p>
             </div>
             <div class="quick-pill-bar">
                 <a class="quick-pill" href="que-hacer.html">Guía en taller</a>
@@ -37,82 +88,41 @@
     </nav>
 
     <main>
+        <figure class="hero-cover">
+            <img src="portada%20(2).jpg" alt="Esquema técnico de motor 1.2 PureTech con correa de distribución bañada en aceite y contaminación por partículas de goma">
+            <figcaption>Arquitectura de distribución húmeda en motores 1.0 / 1.2 PureTech: interacción entre correa bañada en aceite, lubricación y filtrado del cárter.</figcaption>
+        </figure>
+
         <section class="card c-cyan">
-            <div class="hero-banner">
-                <div>
-                    <span class="badge b-amber">Portal de consulta mecánica</span>
-                    <h2 style="border:none;padding:0;margin:8px 0 10px;">Información y experiencias sobre motores PureTech</h2>
-                    <p>Esta web recopila información técnica, experiencias reales y recursos útiles relacionados con los motores PureTech, especialmente en lo referente a la correa de distribución bañada en aceite y a los síntomas y problemas que numerosos usuarios han ido compartiendo con el tiempo.</p>
-                    <p style="margin-bottom:0;">El objetivo es informar, orientar y dar voz a los usuarios, ayudando a identificar síntomas, entender situaciones habituales y saber cómo actuar correctamente, sin alarmismo y sin sustituir el diagnóstico profesional de un taller.</p>
-                </div>
-                <img src="https://images.pexels.com/photos/4489749/pexels-photo-4489749.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Bloque motor y componentes mecánicos en taller de automoción">
-            </div>
+            <h2>Guía completa sobre los motores PureTech 1.0 y 1.2</h2>
+            <p>Este portal recopila documentación técnica, experiencias reales de propietarios, recomendaciones preventivas de mantenimiento y el marco actual de garantías y reclamaciones en España en torno a los motores gasolina PureTech (EB).</p>
+            <p>El objetivo es ofrecer una referencia clara, estructurada y sin alarmismos para entender cómo funciona el sistema de distribución bañada en aceite, identificar señales tempranas y actuar con criterio tanto en el mantenimiento diario como ante una incidencia en el taller.</p>
 
-            <h3>Un espacio abierto de información y experiencias</h3>
-            <p>Además de información general, esta web funciona como un espacio comunitario donde cualquier usuario puede compartir su experiencia, opinión o vivencia personal relacionada con motores PureTech. Se añaden enlaces de grupos en los cuales se trata el tema de los motores PureTech y sus problemas asociados.</p>
-            <ul>
-                <li>No representan a ninguna marca ni entidad.</li>
-                <li>Reflejan casos reales vividos por conductores.</li>
-                <li>Ayudan a identificar patrones comunes y situaciones repetidas.</li>
-            </ul>
-
-            <h3>¿Por qué esta web?</h3>
-            <p>La información sobre estos motores está muy dispersa entre foros, redes sociales y grupos privados. Aquí se intenta ordenar, centralizar y contextualizar esa información para que pueda consultarse de forma clara y accesible.</p>
-
-            <h3>Acceso rápido por apartados</h3>
-            <div class="grid-cards">
-                <a class="mini-card" href="motores-puretech.html">
-                    <strong>Motores PureTech</strong>
-                    <span>Arquitectura de 3 cilindros, 1.0 y 1.2, generaciones y uso real.</span>
+            <div class="quick-grid">
+                <a class="quick-card" href="motores-puretech.html">
+                    <h3>1. Arquitectura y generaciones</h3>
+                    <p>Cómo funcionan los motores PureTech 1.0 / 1.2, diferencias entre versiones atmosféricas y turbo, y evolución técnica.</p>
                 </a>
-                <a class="mini-card" href="problemas-conocidos.html">
-                    <strong>Problemas conocidos</strong>
-                    <span>Correa húmeda, consumo de aceite, dilución y campañas.</span>
+                <a class="quick-card" href="sintomas-habituales.html">
+                    <h3>2. Síntomas y línea temporal</h3>
+                    <p>Señales progresivas, avisos del regulador, consumo de aceite y las 5 fases de deterioro de la correa húmeda.</p>
                 </a>
-                <a class="mini-card" href="mantenimiento-aceite.html">
-                    <strong>Aceite y mantenimiento</strong>
-                    <span>Cambios de especificación y qué pedir por escrito en factura.</span>
+                <a class="quick-card" href="gasolina-aceite.html">
+                    <h3>3. Gasolina en el aceite</h3>
+                    <p>Por qué se diluye el combustible en trayectos cortos y cómo acelera el desgaste químico de la correa.</p>
                 </a>
-                <a class="mini-card" href="sintomas-habituales.html">
-                    <strong>Síntomas habituales</strong>
-                    <span>Tabla por fases: regulador de velocidad, tirones y luz STOP.</span>
+                <a class="quick-card" href="codigos-obd.html">
+                    <h3>4. Códigos OBD (DTC)</h3>
+                    <p>Listado completo de fallos vinculados a presión de aceite, VVT, bomba de vacío y sobrealimentación.</p>
                 </a>
-                <a class="mini-card" href="gasolina-aceite.html">
-                    <strong>Gasolina en aceite</strong>
-                    <span>Dilución de combustible en trayectos cortos y efecto en la correa.</span>
+                <a class="quick-card" href="que-hacer.html">
+                    <h3>5. Qué hacer en el taller</h3>
+                    <p>Pasos prácticos para documentar síntomas, exigir revisión de chupona y proteger tus derechos por escrito.</p>
                 </a>
-                <a class="mini-card" href="degradacion-correa.html">
-                    <strong>Correa húmeda</strong>
-                    <span>Línea temporal en 5 fases, averías derivadas y fotos reales.</span>
+                <a class="quick-card" href="garantia-ampliada.html">
+                    <h3>6. Garantía ampliada y España</h3>
+                    <p>Cobertura de hasta 10 años / 180.000 km, requisitos de mantenimiento, plataforma de reembolsos y casos reales.</p>
                 </a>
-                <a class="mini-card" href="codigos-obd.html">
-                    <strong>Códigos OBD</strong>
-                    <span>Listado de códigos DTC de presión de aceite, VVT, vacío y turbo.</span>
-                </a>
-                <a class="mini-card" href="que-hacer.html">
-                    <strong>Qué hacer</strong>
-                    <span>Guía paso a paso para partes de trabajo y recogida en taller.</span>
-                </a>
-                <a class="mini-card" href="situacion-espana.html">
-                    <strong>España</strong>
-                    <span>Modelos con más reportes, medidas oficiales y reclamaciones.</span>
-                </a>
-                <a class="mini-card" href="garantia-ampliada.html">
-                    <strong>Garantía ampliada</strong>
-                    <span>Cobertura hasta 10 años / 180.000 km, requisitos y críticas.</span>
-                </a>
-                <a class="mini-card" href="casos-reales.html">
-                    <strong>Casos reales</strong>
-                    <span>Alertas de OCU, AFESTEL, medios especializados y juzgados.</span>
-                </a>
-                <a class="mini-card" href="mi-experiencia.html">
-                    <strong>Mi experiencia</strong>
-                    <span>Caso real: correa a 50.000 km, pérdida de potencia y desaceitador.</span>
-                </a>
-            </div>
-
-            <div class="alert warn">
-                <strong>Aviso importante:</strong> Esta web tiene un carácter exclusivamente informativo y comunitario. No representa a ninguna marca, no sustituye el diagnóstico de un profesional y no constituye asesoramiento técnico ni legal. Las opiniones y experiencias publicadas corresponden únicamente a sus autores.
             </div>
         </section>
     </main>
