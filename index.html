@@ -8,7 +8,7 @@
     <style>
         .page-shell {
             display: grid;
-            grid-template-columns: 250px minmax(0, 1fr);
+            grid-template-columns: 256px minmax(0, 1fr);
             gap: 24px;
             align-items: start;
             max-width: 1280px;
@@ -23,26 +23,43 @@
             gap: 14px;
             padding: 16px;
             border-radius: 16px;
-            border: 1px solid rgba(148, 163, 184, 0.22);
-            background: rgba(15, 23, 42, 0.78);
-            box-shadow: 0 14px 32px rgba(2, 6, 23, 0.35);
+            border: 1px solid rgba(251, 191, 36, 0.24);
+            background: linear-gradient(180deg, rgba(24, 32, 48, 0.92) 0%, rgba(15, 23, 42, 0.92) 100%);
+            box-shadow: 0 16px 36px rgba(2, 6, 23, 0.45);
         }
         .sidebar-group {
             display: flex;
             flex-direction: column;
             gap: 6px;
+            padding: 10px;
+            border-radius: 12px;
+            background: rgba(30, 41, 59, 0.55);
+            border: 1px solid rgba(148, 163, 184, 0.14);
         }
-        .sidebar-group + .sidebar-group {
-            padding-top: 12px;
-            border-top: 1px solid rgba(148, 163, 184, 0.16);
+        .sidebar-group.group-cyan {
+            border-left: 3px solid #38bdf8;
+        }
+        .sidebar-group.group-amber {
+            border-left: 3px solid #fbbf24;
+        }
+        .sidebar-group.group-emerald {
+            border-left: 3px solid #34d399;
         }
         .sidebar-group-title {
-            font-size: 0.74rem;
+            font-size: 0.73rem;
             font-weight: 700;
             letter-spacing: 0.08em;
             text-transform: uppercase;
-            color: #94a3b8;
-            padding: 0 10px;
+            padding: 0 8px;
+        }
+        .group-cyan .sidebar-group-title {
+            color: #7dd3fc;
+        }
+        .group-amber .sidebar-group-title {
+            color: #fcd34d;
+        }
+        .group-emerald .sidebar-group-title {
+            color: #6ee7b7;
         }
         .sidebar-list {
             list-style: none;
@@ -54,23 +71,24 @@
         }
         .sidebar-list a {
             display: block;
-            padding: 8px 12px;
-            border-radius: 10px;
+            padding: 8px 10px;
+            border-radius: 9px;
             color: #e2e8f0;
             text-decoration: none;
             font-size: 0.92rem;
             line-height: 1.35;
-            transition: background-color 0.15s ease, color 0.15s ease;
+            transition: background-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
         }
         .sidebar-list a:hover {
-            background: rgba(56, 189, 248, 0.12);
-            color: #ffffff;
+            background: rgba(251, 191, 36, 0.12);
+            color: #fef3c7;
+            transform: translateX(2px);
         }
         .sidebar-list a.active {
-            background: rgba(56, 189, 248, 0.2);
-            color: #7dd3fc;
+            background: rgba(251, 191, 36, 0.18);
+            color: #fde68a;
             font-weight: 600;
-            border: 1px solid rgba(125, 211, 252, 0.35);
+            border: 1px solid rgba(251, 191, 36, 0.42);
         }
         .page-shell main {
             margin: 0;
@@ -83,8 +101,8 @@
             margin: 0 0 24px 0;
             border-radius: 16px;
             overflow: hidden;
-            border: 1px solid rgba(148, 163, 184, 0.22);
-            background: rgba(15, 23, 42, 0.72);
+            border: 1px solid rgba(251, 191, 36, 0.25);
+            background: rgba(15, 23, 42, 0.78);
             box-shadow: 0 18px 40px rgba(2, 6, 23, 0.45);
         }
         .hero-cover img,
@@ -98,8 +116,9 @@
         .exp-photo figcaption {
             padding: 12px 18px;
             font-size: 0.92rem;
-            color: #cbd5e1;
-            border-top: 1px solid rgba(148, 163, 184, 0.16);
+            color: #e2e8f0;
+            background: rgba(24, 32, 48, 0.85);
+            border-top: 1px solid rgba(251, 191, 36, 0.16);
         }
         .quick-grid {
             display: grid;
@@ -111,15 +130,15 @@
             display: block;
             padding: 16px 18px;
             border-radius: 12px;
-            border: 1px solid rgba(148, 163, 184, 0.2);
-            background: rgba(15, 23, 42, 0.55);
+            border: 1px solid rgba(148, 163, 184, 0.22);
+            background: rgba(24, 32, 48, 0.72);
             text-decoration: none;
             color: inherit;
             transition: transform 0.15s ease, border-color 0.15s ease;
         }
         .quick-card:hover {
             transform: translateY(-2px);
-            border-color: rgba(56, 189, 248, 0.55);
+            border-color: rgba(251, 191, 36, 0.55);
         }
         .quick-card h3 {
             margin: 0 0 6px 0;
@@ -128,7 +147,7 @@
         .quick-card p {
             margin: 0;
             font-size: 0.92rem;
-            opacity: 0.88;
+            opacity: 0.9;
         }
         @media (max-width: 900px) {
             .page-shell {
@@ -162,7 +181,7 @@
 
     <div class="page-shell">
     <aside class="sidebar-nav" aria-label="Navegación lateral por bloques">
-        <div class="sidebar-group">
+        <div class="sidebar-group group-cyan">
             <span class="sidebar-group-title">Motor y fallos</span>
             <ul class="sidebar-list">
                 <li><a href="index.html" class="active">Inicio</a></li>
@@ -176,7 +195,7 @@
             </ul>
         </div>
 
-        <div class="sidebar-group">
+        <div class="sidebar-group group-amber">
             <span class="sidebar-group-title">Taller y derechos</span>
             <ul class="sidebar-list">
                 <li><a href="que-hacer.html">Qué hacer</a></li>
@@ -186,7 +205,7 @@
             </ul>
         </div>
 
-        <div class="sidebar-group">
+        <div class="sidebar-group group-emerald">
             <span class="sidebar-group-title">Comunidad y datos</span>
             <ul class="sidebar-list">
                 <li><a href="mi-experiencia.html">Mi experiencia</a></li>
